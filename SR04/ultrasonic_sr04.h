@@ -5,19 +5,19 @@
 #include <ctime>
 #include <unistd.h>
 
-int trig=27;
-int echo=28;
+int trig = 27;  
+int echo = 28;  
 int dur, r;
 float dist;
 clock_t str=0;
 clock_t end=0;
 
-void SR04setup(){
+void SR04Setup(){
     wiringPiSetup();
     pinMode(trig, OUTPUT);
     pinMode(echo, INPUT);
 }
-void height(){
+void distance(){
     digitalWrite(trig, HIGH);
     usleep(10);
     digitalWrite(trig, LOW);
